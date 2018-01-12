@@ -34,7 +34,7 @@ public class Main extends Application {
             return;
         }
         if(url4){
-            engine.executeScript("document.getElementsByClassName('portallink')[11].getElementsByTagName('a')[0].click()");
+            engine.executeScript("document.getElementsByName('REPORTS.DUMMY.MENSYS.1')[0].value = \"SIWSTU001\"; document.getElementsByName('RUN.DUMMY.MENSYS.1')[0].click();");
             url4 = false;
         }
         if(url3){
@@ -45,7 +45,7 @@ public class Main extends Application {
         //engine.excecuteScript("var x = document.getElementById('MUA_CODE.DUMMY.MENSYS')")
         //engine.load("http://yahoo.com");
         if (engine.getLocation().equals(url)){
-            engine.executeScript("var x = true; document.getElementById('MUA_CODE.DUMMY.MENSYS').value = '1500747'; document.getElementById('PASSWORD.DUMMY.MENSYS').value = 'pass5utech'; document.getElementsByName('BP101.DUMMY_B.MENSYS.1')[0].click();");
+            engine.executeScript("var x = true; document.getElementById('MUA_CODE.DUMMY.MENSYS').value = '1500747'; document.getElementById('PASSWORD.DUMMY.MENSYS').value = 'pass4utech'; document.getElementsByName('BP101.DUMMY_B.MENSYS.1')[0].click();");
             url1 = true;
         }
 

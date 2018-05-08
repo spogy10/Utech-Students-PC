@@ -12,6 +12,10 @@ import javafx.stage.Stage;
 public class Main extends Application {
     boolean url1 = false, url2 = false, url3 = false, url4 = false;
 
+    public static String ID = "1500747";
+    public static String PASSWORD = "pass4utech";
+    public static String DOB = "050997";
+
   VBox vb = new VBox();
 
   public static void main(String[] args) {
@@ -45,12 +49,12 @@ public class Main extends Application {
         //engine.excecuteScript("var x = document.getElementById('MUA_CODE.DUMMY.MENSYS')")
         //engine.load("http://yahoo.com");
         if (engine.getLocation().equals(url)){
-            engine.executeScript("var x = true; document.getElementById('MUA_CODE.DUMMY.MENSYS').value = '1500747'; document.getElementById('PASSWORD.DUMMY.MENSYS').value = 'pass4utech'; document.getElementsByName('BP101.DUMMY_B.MENSYS.1')[0].click();");
+            engine.executeScript("var x = true; document.getElementById('MUA_CODE.DUMMY.MENSYS').value = '"+ID+"'; document.getElementById('PASSWORD.DUMMY.MENSYS').value = '"+PASSWORD+"'; document.getElementsByName('BP101.DUMMY_B.MENSYS.1')[0].click();");
             url1 = true;
         }
 
         if(url1){
-            engine.executeScript("document.getElementsByName('ANSWER.MUQ.MENSYS.1')[0].value = '050997'; document.getElementsByName('STORE.DUMMY_BUTT.MENSYS.1')[0].click();");
+            engine.executeScript("document.getElementsByName('ANSWER.MUQ.MENSYS.1')[0].value = '"+DOB+"'; document.getElementsByName('STORE.DUMMY_BUTT.MENSYS.1')[0].click();");
             url1 = false;
             url2 = true;
         }

@@ -37,6 +37,7 @@ public class Main extends Application {
         if (newValue != Worker.State.SUCCEEDED) {
             return;
         }
+
         if(url4){
             engine.executeScript("document.getElementsByName('REPORTS.DUMMY.MENSYS.1')[0].value = \"SIWSTU001\"; document.getElementsByName('RUN.DUMMY.MENSYS.1')[0].click();");
             url4 = false;
